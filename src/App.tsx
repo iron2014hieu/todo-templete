@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Footer } from "./components/Footer/Footer";
+import { Header } from "./components/Header/Header";
+import { TodoItem } from "./components/TodoItem/TodoItem";
+
+export interface TodoModel {
+  id: number;
+  title: string;
+  description: string | "";
+  status: "active" | "completed";
+}
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="todoapp">
+      <Header />
+      <section className="main">
+        <div>
+          <input id="toggle-all" className="toggle-all" type="checkbox" />
+          <label htmlFor="toggle-all">Mark all as complete</label>
+          <ul className="todo-list">
+            {/* These are here just to show the structure of the list items
+    List items should get the class `editing` when editing and `completed` when marked as completed */}
+            <TodoItem/>
+          </ul>
+        </div>
+      </section>
+      <Footer />
+      <footer className="info">
+        <p>Double-click to edit a todo</p>
+      </footer>
+    </section>
   );
 }
 
