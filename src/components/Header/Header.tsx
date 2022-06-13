@@ -4,13 +4,14 @@ interface Props {}
 export const Header: FC<Props> = () => {
   return (
     <>
-      <header className="header">
+      <header classname="header">
         <h1>todos</h1>
         <input
-          className="new-todo"
+          classname="new-todo"
           placeholder="What needs to be done?"
-          autoFocus
+          autofocus
         />
+        123
       </header>
     </>
   );
