@@ -28,7 +28,7 @@ function App() {
       </section>
       <Footer />
       <footer className="info">
-        <p>Double-click to edit a todo</p>
+        <p>Double-click to edit a todo dev</p>
       </footer>
     </section>
   );
